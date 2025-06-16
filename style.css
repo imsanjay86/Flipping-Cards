@@ -1,0 +1,178 @@
+
+
+:root {
+  --animate-time: 1.5s;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: green;
+}
+
+.deck {
+  transform-style: preserve-3d;
+  position: absolute;
+  left: calc(50% - 100px);
+  top: 250px;
+
+}
+
+.card {
+  display: inline-block;
+  width: 200px;
+  height: 290px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform var(--animate-time);
+  /* transform-style: preserve-3d; */
+  -webkit-transform-style: preserve-3d;
+  transform-origin: center 150%;
+}
+.card > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform var(--animate-time);
+}
+
+.card-face {
+  transform: rotateY(0.5turn) translateZ(2px);
+}
+
+.card-back {
+  transform: rotateY(0.5turn) translateZ(-2px);
+}
+
+body:hover img {
+  transform: rotateY(0);
+}
+
+.ace {
+  --n: -6;
+  transform: translateZ(150px);
+}
+
+body:hover .ace {
+  transform: translateZ(-150px) rotateY(20grad) rotateZ(-50grad);
+}
+
+.two {
+  --n: -5;
+  transform: translateZ(125px);
+}
+
+body:hover .two {
+  transform: translateZ(-125px) rotateY(16.6666666667grad) rotateZ(-41.6666666667grad);
+}
+
+.three {
+  --n: -4;
+  transform: translateZ(100px);
+}
+
+body:hover .three {
+  transform: translateZ(-100px) rotateY(13.3333333333grad) rotateZ(-33.3333333333grad);
+}
+
+.four {
+  --n: -3;
+  transform: translateZ(75px);
+}
+
+body:hover .four {
+  transform: translateZ(-75px) rotateY(10grad) rotateZ(-25grad);
+}
+
+.five {
+  --n: -2;
+  transform: translateZ(50px);
+}
+
+body:hover .five {
+  transform: translateZ(-50px) rotateY(6.6666666667grad) rotateZ(-16.6666666667grad);
+}
+
+.six {
+  --n: -1;
+  transform: translateZ(25px);
+}
+
+body:hover .six {
+  transform: translateZ(-25px) rotateY(3.3333333333grad) rotateZ(-8.3333333333grad);
+}
+
+.seven {
+  --n: 0;
+  transform: translateZ(0px);
+}
+
+body:hover .seven {
+  transform: translateZ(0px) rotateY(0grad) rotateZ(0grad);
+}
+
+.eight {
+  --n: 1;
+  transform: translateZ(-25px);
+}
+
+body:hover .eight {
+  transform: translateZ(25px) rotateY(-3.3333333333grad) rotateZ(8.3333333333grad);
+}
+
+.nine {
+  --n: 2;
+  transform: translateZ(-50px);
+}
+
+body:hover .nine {
+  transform: translateZ(50px) rotateY(-6.6666666667grad) rotateZ(16.6666666667grad);
+}
+
+.ten {
+  --n: 3;
+  transform: translateZ(-75px);
+}
+
+body:hover .ten {
+  transform: translateZ(75px) rotateY(-10grad) rotateZ(25grad);
+}
+
+.jack {
+  --n: 4;
+  transform: translateZ(-100px);
+}
+
+body:hover .jack {
+  transform: translateZ(100px) rotateY(-13.3333333333grad) rotateZ(33.3333333333grad);
+}
+
+.queen {
+  --n: 5;
+  transform: translateZ(-125px);
+}
+
+body:hover .queen {
+  transform: translateZ(125px) rotateY(-16.6666666667grad) rotateZ(41.6666666667grad);
+}
+
+.king {
+  --n: 6;
+  transform: translateZ(-150px);
+}
+
+body:hover .king {
+  transform: translateZ(150px) rotateY(-20grad) rotateZ(50grad);
+}
+
+h1{
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style:italic;
+   
+}
